@@ -3,30 +3,51 @@ let teamTwo = 0
 
 function handleAddingPointsTeamOne() {
   const valueCount = document.querySelector('.teamOneScore')
+  if (teamOne >= 21) {
+    teamOne = 21
+    return
+  }
   teamOne++
+  if (teamOne >= 21) {
+    const header = document.querySelector('h1')
+    header.textContent = 'You are a winner!'
+  }
   valueCount.textContent = `${teamOne}`
 }
 
 function handleSubPointsTeamOne() {
   const valueCount = document.querySelector('.teamOneScore')
   teamOne--
+  if (teamOne <= 0) {
+    teamOne = 0
+  }
   valueCount.textContent = `${teamTwo}`
 }
 
 function handleAddingPointsTeamTwo() {
   const valueCount = document.querySelector('.teamTwoScore')
+  if (teamTwo >= 21) {
+    teamTwo = 21
+    return
+  }
   teamTwo++
+  if (teamTwo >= 21) {
+    const header = document.querySelector('h1')
+    header.textContent = 'You are a winner!'
+  }
   valueCount.textContent = `${teamTwo}`
 }
 
 function handleSubPointsTeamTwo() {
   const valueCount = document.querySelector('.teamTwoScore')
   teamTwo--
+  if (teamTwo <= 0) {
+    teamTwo = 0
+  }
   valueCount.textContent = `${teamTwo}`
 }
 
 function updateTeamOneName(event) {
-  console.log('tacotuse')
   const teamOneLog = document.querySelector('.team1 h2')
   teamOneLog.textContent = event.target.value
 }
