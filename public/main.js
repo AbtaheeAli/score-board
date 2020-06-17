@@ -10,7 +10,7 @@ function handleAddingPointsTeamOne() {
   teamOne++
   if (teamOne >= 21) {
     const header = document.querySelector('h1')
-    header.textContent = 'You are a winner!'
+    header.textContent = 'You are a Winner Team 1!'
   }
   valueCount.textContent = `${teamOne}`
 }
@@ -33,7 +33,7 @@ function handleAddingPointsTeamTwo() {
   teamTwo++
   if (teamTwo >= 21) {
     const header = document.querySelector('h1')
-    header.textContent = 'You are a winner!'
+    header.textContent = 'You are a Winner Team 2!'
   }
   valueCount.textContent = `${teamTwo}`
 }
