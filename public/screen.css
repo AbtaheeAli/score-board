@@ -63,6 +63,14 @@ fieldset i.add {
   color: green;
 }
 
+fieldset id.add {
+  color: green;
+}
+
 fieldset i.subtract {
+  color: #f64545;
+}
+
+fieldset id.subtract {
   color: #f64545;
 }
