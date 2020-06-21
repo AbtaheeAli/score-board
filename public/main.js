@@ -4,7 +4,6 @@ let teamTwo = 0
 function handleAddingPointsTeamOne() {
   const valueCount = document.querySelector('.teamOneScore')
   if (teamOne >= 21) {
-    teamOne = 21
     return
   }
   teamOne++
@@ -19,7 +18,7 @@ function handleSubPointsTeamOne() {
   const valueCount = document.querySelector('.teamOneScore')
   teamOne--
   if (teamOne <= 0) {
-    teamOne = 0
+    return
   }
   valueCount.textContent = `${teamTwo}`
 }
@@ -27,7 +26,6 @@ function handleSubPointsTeamOne() {
 function handleAddingPointsTeamTwo() {
   const valueCount = document.querySelector('.teamTwoScore')
   if (teamTwo >= 21) {
-    teamTwo = 21
     return
   }
   teamTwo++
@@ -42,7 +40,7 @@ function handleSubPointsTeamTwo() {
   const valueCount = document.querySelector('.teamTwoScore')
   teamTwo--
   if (teamTwo <= 0) {
-    teamTwo = 0
+    return
   }
   valueCount.textContent = `${teamTwo}`
 }
