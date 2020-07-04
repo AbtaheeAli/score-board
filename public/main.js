@@ -17,30 +17,33 @@ function handleAddingPointsTeamOne() {
 function handleSubPointsTeamOne() {
   const valueCount = document.querySelector('.teamOneScore')
   teamOne--
-  if (teamOne <= 0) {
-    return
+  if (teamOne < 0) {
+    teamOne = 0
   }
-  valueCount.textContent = `${teamTwo}`
+  valueCount.textContent = `${teamOne}`
 }
 
 function handleAddingPointsTeamTwo() {
   const valueCount = document.querySelector('.teamTwoScore')
+
   if (teamTwo >= 21) {
     return
   }
+
   teamTwo++
   if (teamTwo >= 21) {
     const header = document.querySelector('h1')
     header.textContent = 'You are a Winner Team 2!'
   }
+
   valueCount.textContent = `${teamTwo}`
 }
 
 function handleSubPointsTeamTwo() {
   const valueCount = document.querySelector('.teamTwoScore')
   teamTwo--
-  if (teamTwo <= 0) {
-    return
+  if (teamTwo < 0) {
+    teamTwo = 0
   }
   valueCount.textContent = `${teamTwo}`
 }
